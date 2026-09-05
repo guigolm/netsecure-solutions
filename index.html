@@ -1,21 +1,483 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NetSecure Solutions</title>
+    <meta
+        name="description"
+        content="NetSecure Solutions — Segurança da informação, redes, infraestrutura e DevOps."
+    >
+
+    <title>NetSecure Solutions | Tecnologia e Segurança</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>NetSecure Solutions</h1>
+    <!-- HEADER -->
 
-    <p>
-        Segurança, redes e tecnologia para provedores de Internet.
-    </p>
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="#inicio" class="logo">
+                NET<span>SECURE</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <nav class="menu" id="menu">
+
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#tecnologias">Tecnologias</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        SEGURANÇA • REDES • INFRAESTRUTURA
+                    </span>
+
+                    <h1>
+                        Tecnologia para redes
+                        <strong>mais seguras.</strong>
+                    </h1>
+
+                    <p>
+                        Soluções em infraestrutura, redes, segurança da informação
+                        e automação para ambientes que precisam de desempenho,
+                        estabilidade e proteção.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#servicos" class="btn btn-primary">
+                            Conheça nossos serviços
+                        </a>
+
+                        <a href="#contato" class="btn btn-secondary">
+                            Fale conosco
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="network-card">
+
+                        <div class="network-header">
+                            <span>NETSECURE</span>
+                            <span class="status">● ONLINE</span>
+                        </div>
+
+                        <div class="network-diagram">
+
+                            <div class="node">
+                                INTERNET
+                            </div>
+
+                            <div class="connection"></div>
+
+                            <div class="node central">
+                                SECURITY
+                            </div>
+
+                            <div class="connection"></div>
+
+                            <div class="node">
+                                NETWORK
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVIÇOS -->
+
+        <section class="section" id="servicos">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>01 / SERVIÇOS</span>
+
+                    <h2>
+                        Soluções para sua infraestrutura
+                    </h2>
+
+                    <p>
+                        Projetamos, analisamos e otimizamos ambientes
+                        de rede e infraestrutura tecnológica.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            🛡
+                        </div>
+
+                        <h3>
+                            Segurança da Informação
+                        </h3>
+
+                        <p>
+                            Análise e fortalecimento da segurança de
+                            redes, servidores e ambientes corporativos.
+                        </p>
+
+                        <ul>
+                            <li>Firewall</li>
+                            <li>ACLs</li>
+                            <li>Mitigação de ataques</li>
+                            <li>Análise de vulnerabilidades</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Redes & Infraestrutura
+                        </h3>
+
+                        <p>
+                            Desenvolvimento e análise de arquiteturas
+                            de rede para ambientes de alta disponibilidade.
+                        </p>
+
+                        <ul>
+                            <li>BGP / OSPF</li>
+                            <li>MPLS</li>
+                            <li>VPN</li>
+                            <li>Data Center</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            DevOps & Automação
+                        </h3>
+
+                        <p>
+                            Automação de processos e ferramentas para
+                            aumentar eficiência e reduzir tarefas manuais.
+                        </p>
+
+                        <ul>
+                            <li>Linux</li>
+                            <li>Python</li>
+                            <li>Automação</li>
+                            <li>Monitoramento</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="section section-dark" id="sobre">
+
+            <div class="container about">
+
+                <div class="about-title">
+
+                    <span>02 / SOBRE</span>
+
+                    <h2>
+                        Infraestrutura bem projetada começa com uma visão completa.
+                    </h2>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <p>
+                        A NetSecure Solutions atua na análise, planejamento
+                        e implementação de soluções relacionadas a redes,
+                        infraestrutura e segurança da informação.
+                    </p>
+
+                    <p>
+                        Nosso objetivo é transformar ambientes complexos
+                        em infraestruturas mais organizadas, resilientes,
+                        seguras e preparadas para crescimento.
+                    </p>
+
+                    <p>
+                        Trabalhamos com uma abordagem prática, considerando
+                        desempenho, disponibilidade, segurança e facilidade
+                        de operação.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECNOLOGIAS -->
+
+        <section class="section" id="tecnologias">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>03 / TECNOLOGIAS</span>
+
+                    <h2>
+                        Conhecimento técnico
+                    </h2>
+
+                    <p>
+                        Tecnologias e conceitos utilizados na construção
+                        e operação de ambientes de rede.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-grid">
+
+                    <span>BGP</span>
+                    <span>OSPF</span>
+                    <span>MPLS</span>
+                    <span>EVPN</span>
+                    <span>VPN</span>
+                    <span>Firewall</span>
+                    <span>Fortinet</span>
+                    <span>Juniper</span>
+                    <span>Cisco</span>
+                    <span>Linux</span>
+                    <span>Python</span>
+                    <span>Docker</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>PRTG</span>
+                    <span>Zabbix</span>
+                    <span>Wazuh</span>
+                    <span>Graylog</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJETOS -->
+
+        <section class="section section-dark" id="projetos">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>04 / PROJETOS</span>
+
+                    <h2>
+                        Projetos & experiências
+                    </h2>
+
+                    <p>
+                        Alguns dos ambientes e áreas de atuação
+                        relacionados à infraestrutura e tecnologia.
+                    </p>
+
+                </div>
+
+
+                <div class="projects">
+
+                    <article class="project">
+
+                        <span>NETWORK</span>
+
+                        <h3>
+                            Infraestrutura de redes
+                        </h3>
+
+                        <p>
+                            Arquitetura e análise de redes LAN, WAN,
+                            MPLS e ambientes de provedores.
+                        </p>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <span>SECURITY</span>
+
+                        <h3>
+                            Segurança de redes
+                        </h3>
+
+                        <p>
+                            Firewalls, controle de acesso, monitoramento
+                            e estratégias de proteção.
+                        </p>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <span>AUTOMATION</span>
+
+                        <h3>
+                            Automação
+                        </h3>
+
+                        <p>
+                            Scripts e ferramentas para automatizar
+                            processos e operações de infraestrutura.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+
+        <section class="contact" id="contato">
+
+            <div class="container contact-content">
+
+                <span>
+                    05 / CONTATO
+                </span>
+
+                <h2>
+                    Vamos conversar sobre seu projeto?
+                </h2>
+
+                <p>
+                    Entre em contato para discutir sua infraestrutura,
+                    rede ou necessidade de segurança.
+                </p>
+
+                <!-- TROQUE O NÚMERO ABAIXO PELO WHATSAPP DA EMPRESA -->
+
+                <a
+                    href="https://wa.me/5500000000000"
+                    target="_blank"
+                    class="btn btn-primary"
+                >
+                    Fale conosco pelo WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="#inicio" class="logo">
+                    NET<span>SECURE</span>
+                </a>
+
+                <p>
+                    Segurança, redes e infraestrutura.
+                </p>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <p>
+                    © <span id="year"></span>
+                    NetSecure Solutions
+                </p>
+
+                <p>
+                    Todos os direitos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
