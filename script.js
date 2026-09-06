@@ -1,15 +1,21 @@
-// Atualiza automaticamente o ano do rodapé
+// =========================================================
+// ANO DO RODAPÉ
+// =========================================================
 
 const year = document.getElementById("year");
 
 year.textContent = new Date().getFullYear();
 
 
-// Menu mobile
+
+// =========================================================
+// MENU MOBILE
+// =========================================================
 
 const menuToggle = document.getElementById("menuToggle");
 
 const menu = document.getElementById("menu");
+
 
 menuToggle.addEventListener("click", () => {
 
@@ -18,11 +24,15 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-// Fecha o menu depois de clicar em um link
+
+// =========================================================
+// FECHAR MENU AO CLICAR EM UM LINK
+// =========================================================
 
 const menuLinks = document.querySelectorAll(".menu a");
 
-menuLinks.forEach(link => {
+
+menuLinks.forEach((link) => {
 
     link.addEventListener("click", () => {
 
