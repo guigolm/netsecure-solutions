@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b11;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 11, 17, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #4cc9f0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.arquivo-page {
+    padding-top: 80px;
+}
+
+.arquivo-hero {
+    padding: 100px 25px 70px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(76, 201, 240, 0.08),
+            transparent 45%
+        );
+}
+
+.arquivo-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-tag {
+    display: inline-block;
+
+    color: #4cc9f0;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.arquivo-hero h1 {
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.arquivo-hero p {
+    max-width: 700px;
+
+    color: #9aa4b2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FERRAMENTAS
+========================= */
+
+.arquivo-section {
+    padding: 50px 25px 80px;
+}
+
+.arquivo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.arquivo-header h2 {
+    font-size: 30px;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-button {
+    padding: 10px 20px;
+
+    border: 1px solid rgba(215, 25, 47, 0.5);
+    border-radius: 7px;
+
+    background: rgba(215, 25, 47, 0.08);
+
+    color: #ff6b78;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.logout-button:hover {
+    background: rgba(215, 25, 47, 0.18);
+    border-color: #d7192f;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.tool-card {
+    display: block;
+
+    padding: 30px;
+
+    background: #0d131d;
+
+    border: 1px solid #1d2938;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(76, 201, 240, 0.5);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.tool-card-disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.tool-card-disabled:hover {
+    transform: none;
+    border-color: #1d2938;
+    box-shadow: none;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 10px;
+
+    background: rgba(76, 201, 240, 0.08);
+
+    border: 1px solid rgba(76, 201, 240, 0.2);
+
+    color: #4cc9f0;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tool-content h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.tool-content p {
+    color: #9aa4b2;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.tool-link {
+    color: #4cc9f0;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   AVISO
+========================= */
+
+.arquivo-notice {
+    padding: 0 25px 80px;
+}
+
+.notice-box {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    border: 1px solid rgba(76, 201, 240, 0.15);
+    border-radius: 10px;
+
+    background: rgba(76, 201, 240, 0.03);
+}
+
+.notice-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(76, 201, 240, 0.1);
+
+    color: #4cc9f0;
+
+    font-weight: bold;
+}
+
+.notice-box h3 {
+    margin-bottom: 5px;
+}
+
+.notice-box p {
+    color: #9aa4b2;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    border-top: 1px solid #1d2938;
+
+    padding: 30px 25px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p {
+    color: #667085;
+    font-size: 13px;
+}
+
+.footer a {
+    color: #4cc9f0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+    .header-container {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .arquivo-page {
+        padding-top: 140px;
+    }
+
+    .arquivo-hero h1 {
+        font-size: 36px;
+    }
+
+    .arquivo-header {
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

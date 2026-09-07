@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="robots"
+        content="noindex, nofollow"
+    >
+
+    <meta
+        name="description"
+        content="Ferramenta NetSecure Solutions para análise de logs CGNAT."
+    >
+    <script>
+        if (sessionStorage.getItem("netsecureAuth") !== "true") {
+        window.location.replace("../../login.html");
+        }
+    </script>
+    <title>Buscador CGNAT | NetSecure Solutions</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../../assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a
+                href="../../index.html"
+                class="logo"
+            >
+
+                <img
+                    src="../../assets/logo.png"
+                    alt="NetSecure Solutions"
+                >
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+
+            <nav
+                class="menu"
+                id="menu"
+            >
+
+                <a href="../../index.html#inicio">
+                    Início
+                </a>
+
+                <a href="../../index.html#servicos">
+                    Serviços
+                </a>
+
+                <a href="../../index.html#sobre">
+                    Sobre
+                </a>
+
+                <a href="../../index.html#tecnologias">
+                    Tecnologias
+                </a>
+
+                <a href="../../index.html#projetos">
+                    Projetos
+                </a>
+
+                <a href="../../arquivo.html">
+                    Arquivo
+                </a>
+
+                <a href="../../index.html#contato">
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="tool-page">
+
+        <div class="container">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="tool-header">
+
+                <span class="tool-tag">
+                    NETSECURE / ARQUIVO / CGNAT
+                </span>
+
+                <h1>
+                    Buscador de clientes
+                    <strong>CGNAT.</strong>
+                </h1>
+
+                <p>
+                    Analise logs de CGNAT e identifique
+                    endereços IP que possuem registros
+                    <strong>NAT-OTR-T</strong> sem
+                    registros <strong>NAT-OTR-Y</strong>.
+                </p>
+
+            </div>
+
+
+            <!-- ÁREA DE ENTRADA -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            ENTRADA
+                        </span>
+
+                        <h2>
+                            Dados dos logs
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="local-badge"
+                        title="O processamento acontece somente neste navegador."
+                    >
+                        ● PROCESSAMENTO LOCAL
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="inputText"
+                    placeholder="Cole aqui os dados dos logs CGNAT...
+
+Exemplo:
+2026-09-07 10:20:01 IP 100.64.10.25 NAT-OTR-T
+2026-09-07 10:20:02 IP 100.64.10.26 NAT-OTR-Y
+2026-09-07 10:20:03 IP 100.64.10.25 NAT-OTR-T"
+                    spellcheck="false"
+                ></textarea>
+
+
+                <div class="input-info">
+
+                    <span id="lineCounter">
+                        0 linhas
+                    </span>
+
+                    <span>
+                        Os dados permanecem no seu computador.
+                    </span>
+
+                </div>
+
+
+                <div class="actions">
+
+                    <button
+                        class="btn btn-primary"
+                        id="processButton"
+                    >
+                        PROCESSAR DADOS
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        id="clearButton"
+                    >
+                        LIMPAR
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RESULTADOS -->
+
+            <section
+                class="panel results-panel"
+                id="resultsPanel"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            RESULTADO
+                        </span>
+
+                        <h2>
+                            Clientes encontrados
+                        </h2>
+
+                    </div>
+
+
+                    <div class="result-counter">
+
+                        <span id="resultCount">
+                            0
+                        </span>
+
+                        <small>
+                            resultados
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BARRA DE FERRAMENTAS -->
+
+                <div class="table-toolbar">
+
+                    <label class="checkbox-control">
+
+                        <input
+                            type="checkbox"
+                            id="selectAll"
+                        >
+
+                        <span>
+                            Selecionar todos
+                        </span>
+
+                    </label>
+
+
+                    <div class="toolbar-actions">
+
+                        <button
+                            class="btn btn-small"
+                            id="copyButton"
+                        >
+                            COPIAR SELEÇÃO
+                        </button>
+
+                        <button
+                            class="btn btn-small"
+                            id="copyIpButton"
+                        >
+                            COPIAR IPs
+                        </button>
+
+                        <button
+                            class="btn btn-small"
+                            id="exportButton"
+                        >
+                            EXPORTAR TXT
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABELA -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th class="select-column">
+                                    #
+                                </th>
+
+                                <th>
+                                    Mensagem
+                                </th>
+
+                                <th>
+                                    IP de Origem
+                                </th>
+
+                                <th>
+                                    Tipo NAT
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="resultsBody">
+
+                            <tr class="empty-row">
+
+                                <td colspan="4">
+
+                                    <div class="empty-state">
+
+                                        <span>
+                                            ◇
+                                        </span>
+
+                                        <p>
+                                            Nenhum resultado processado.
+                                        </p>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div
+                    class="status-message"
+                    id="statusMessage"
+                ></div>
+
+            </section>
+
+
+
+            <!-- INFORMAÇÕES -->
+
+            <section class="info-grid">
+
+
+                <div class="info-card">
+
+                    <span>
+                        REGRA
+                    </span>
+
+                    <h3>
+                        O que a ferramenta procura?
+                    </h3>
+
+                    <p>
+                        São agrupados os registros por endereço
+                        IP. O resultado apresenta somente os IPs
+                        que possuem pelo menos um
+                        <strong>NAT-OTR-T</strong> e nenhum
+                        <strong>NAT-OTR-Y</strong>.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>
+                        PRIVACIDADE
+                    </span>
+
+                    <h3>
+                        Processamento local
+                    </h3>
+
+                    <p>
+                        Os logs são processados diretamente
+                        pelo navegador utilizando JavaScript.
+                        Nenhum dado é enviado para a NetSecure
+                        ou para qualquer servidor.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- VOLTAR -->
+
+            <div class="back-link">
+
+                <a href="../../arquivo.html">
+                    ← Voltar para o Arquivo
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

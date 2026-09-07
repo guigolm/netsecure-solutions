@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acesso Restrito | NetSecure Solutions</title>
+
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <img src="assets/logo.png" alt="NetSecure Solutions" class="logo">
+
+            <h1>Acesso Restrito</h1>
+
+            <p class="subtitle">
+                Área destinada às ferramentas internas.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input
+                        type="text"
+                        id="username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input
+                        type="password"
+                        id="password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+                <p id="errorMessage" class="error-message"></p>
+
+            </form>
+
+            <a href="index.html" class="back-link">
+                ← Voltar para o site
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
