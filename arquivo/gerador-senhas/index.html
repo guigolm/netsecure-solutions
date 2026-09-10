@@ -2,69 +2,135 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Proteção de acesso -->
     <script>
         if (sessionStorage.getItem("netsecureAuth") !== "true") {
             window.location.replace("../../login.html");
         }
     </script>
 
-    <title>Gerador de Senhas | NetSecure Solutions">
+    <title>
+        Gerador de Senhas | NetSecure Solutions
+    </title>
 
-    <link rel="icon" href="../../assets/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="icon"
+        href="../../assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
+
 <body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header class="header">
 
         <div class="header-container">
 
-            <a href="../../arquivo.html">
+
+            <a
+                href="../../arquivo.html"
+                class="logo-link"
+            >
+
                 <img
                     src="../../assets/logo.png"
                     alt="NetSecure Solutions"
                     class="logo"
                 >
+
             </a>
 
+
             <div class="header-title">
+
                 GERADOR DE SENHAS
+
             </div>
 
-            <button class="logout-button" onclick="logout()">
+
+            <button
+                class="logout-button"
+                onclick="logout()"
+            >
+
                 Sair
+
             </button>
+
 
         </div>
 
     </header>
 
 
+
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
     <main>
+
+
+        <!-- HERO -->
 
         <section class="hero">
 
-            <span>NETSECURE / SECURITY</span>
+            <span>
+                NETSECURE / SECURITY
+            </span>
 
-            <h1>Gerador de Senhas</h1>
+
+            <h1>
+                Gerador de Senhas
+            </h1>
+
 
             <p>
-                Gere senhas aleatórias e personalizadas para utilização
-                em sistemas, equipamentos e serviços.
+                Gere senhas aleatórias e personalizadas
+                para utilização em sistemas, equipamentos
+                e serviços.
             </p>
 
         </section>
 
 
+
+        <!-- =========================
+             GERADOR
+        ========================== -->
+
         <section class="generator">
+
+
+            <!-- CONFIGURAÇÃO -->
 
             <div class="card">
 
-                <h2>Configuração</h2>
+                <h2>
+                    Configuração
+                </h2>
+
+
+                <!-- TAMANHO -->
 
                 <div class="length-container">
 
@@ -74,11 +140,13 @@
                             Tamanho da senha
                         </label>
 
+
                         <strong id="lengthValue">
                             20
                         </strong>
 
                     </div>
+
 
                     <input
                         type="range"
@@ -91,7 +159,11 @@
                 </div>
 
 
+
+                <!-- OPÇÕES -->
+
                 <div class="options">
+
 
                     <label class="option">
 
@@ -106,6 +178,7 @@
                         </span>
 
                     </label>
+
 
 
                     <label class="option">
@@ -123,6 +196,7 @@
                     </label>
 
 
+
                     <label class="option">
 
                         <input
@@ -136,6 +210,7 @@
                         </span>
 
                     </label>
+
 
 
                     <label class="option">
@@ -152,20 +227,34 @@
 
                     </label>
 
+
                 </div>
 
 
+
+                <!-- BOTÃO -->
+
                 <button
+                    type="button"
                     class="generate-button"
                     onclick="generatePassword()"
                 >
+
                     Gerar Senha
+
                 </button>
+
 
             </div>
 
 
+
+            <!-- =========================
+                 RESULTADO
+            ========================== -->
+
             <div class="result-card">
+
 
                 <div class="result-header">
 
@@ -173,25 +262,36 @@
                         Senha gerada
                     </span>
 
+
                     <button
+                        type="button"
                         class="copy-button"
                         onclick="copyPassword()"
                     >
+
                         Copiar
+
                     </button>
 
                 </div>
+
 
 
                 <div
                     class="password-display"
                     id="password"
                 >
+
                     Clique em "Gerar Senha"
+
                 </div>
 
 
+
+                <!-- FORÇA -->
+
                 <div class="strength-container">
+
 
                     <div class="strength-label">
 
@@ -199,11 +299,13 @@
                             Força
                         </span>
 
+
                         <strong id="strengthText">
                             -
                         </strong>
 
                     </div>
+
 
                     <div class="strength-bar">
 
@@ -214,14 +316,25 @@
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
+
+            <!-- =========================
+                 AVISO
+            ========================== -->
+
             <div class="info-box">
 
-                <strong>Privacidade</strong>
+
+                <strong>
+                    Privacidade
+                </strong>
+
 
                 <p>
                     A senha é gerada inteiramente no navegador.
@@ -229,23 +342,36 @@
                     servidores externos.
                 </p>
 
+
             </div>
+
 
         </section>
 
     </main>
 
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
         <a href="../../arquivo.html">
+
             ← Voltar para ferramentas
+
         </a>
 
     </footer>
 
 
+
+    <!-- SCRIPT -->
+
     <script src="script.js"></script>
+
 
 </body>
 
