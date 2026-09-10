@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (sessionStorage.getItem("netsecureAuth") !== "true") {
+            window.location.replace("../../login.html");
+        }
+    </script>
+
+    <title>Calculadora de Banda IPTV | NetSecure Solutions</title>
+
+    <link rel="icon" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="../../arquivo.html">
+                <img src="../../assets/logo.png"
+                     alt="NetSecure Solutions"
+                     class="logo">
+            </a>
+
+            <div class="header-title">
+                BANDA IPTV
+            </div>
+
+            <button class="logout-button" onclick="logout()">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <span>NETSECURE / IPTV</span>
+
+            <h1>Calculadora de Banda IPTV</h1>
+
+            <p>
+                Estime a capacidade de rede necessária para
+                distribuição de conteúdo IPTV.
+            </p>
+
+        </section>
+
+
+        <section class="calculator">
+
+            <div class="card">
+
+                <h2>Parâmetros</h2>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="users">
+                            Usuários simultâneos
+                        </label>
+
+                        <input
+                            type="number"
+                            id="users"
+                            min="1"
+                            value="500"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="bitrate">
+                            Bitrate médio por usuário (Mbps)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="bitrate"
+                            min="0.1"
+                            step="0.1"
+                            value="8"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="margin">
+                            Margem adicional (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="margin"
+                            min="0"
+                            value="15"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button class="calculate-button" onclick="calculateBandwidth()">
+                    Calcular Banda
+                </button>
+
+            </div>
+
+
+            <div class="results">
+
+                <div class="result-card">
+
+                    <span>
+                        Banda teórica
+                    </span>
+
+                    <strong id="theoretical">
+                        0 Mbps
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Margem adicional
+                    </span>
+
+                    <strong id="marginValue">
+                        0 Mbps
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card highlight">
+
+                    <span>
+                        Banda recomendada
+                    </span>
+
+                    <strong id="recommended">
+                        0 Mbps
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Usuários simultâneos
+                    </span>
+
+                    <strong id="userResult">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>Observação</strong>
+
+                <p>
+                    O cálculo representa a banda necessária considerando
+                    todos os usuários simultaneamente consumindo o
+                    bitrate informado. A margem permite considerar
+                    variações de tráfego e crescimento da operação.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <a href="../../arquivo.html">
+            ← Voltar para ferramentas
+        </a>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
