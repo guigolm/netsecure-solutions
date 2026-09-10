@@ -4,64 +4,85 @@
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+html {
     background: #080b11;
-    color: #ffffff;
+}
+
+body {
     min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #080b11;
+
+    color: #ffffff;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .header {
-    border-bottom: 1px solid #1d2938;
+    width: 100%;
+
     background: #0a0f17;
+
+    border-bottom: 1px solid #1d2938;
 }
 
 .header-container {
     max-width: 1100px;
-    margin: auto;
 
     min-height: 75px;
+
+    margin: auto;
 
     padding: 0 25px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
-.header a {
+.logo-link {
     display: flex;
+
+    align-items: center;
 }
 
 .logo {
     width: 145px;
+
+    height: auto;
+
+    display: block;
 }
 
 .header-title {
     color: #4cc9f0;
 
     font-size: 13px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
 }
 
 .logout-button {
-    padding: 8px 16px;
-
-    border: 1px solid rgba(215, 25, 47, 0.5);
-    border-radius: 7px;
+    padding: 9px 17px;
 
     background: transparent;
+
+    border: 1px solid rgba(215, 25, 47, 0.5);
+
+    border-radius: 7px;
 
     color: #ff6b78;
 
     cursor: pointer;
+
+    font-size: 14px;
 }
 
 .logout-button:hover {
@@ -69,12 +90,11 @@ body {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     max-width: 1100px;
+
     margin: auto;
 
     padding: 70px 25px 40px;
@@ -84,6 +104,7 @@ body {
     color: #4cc9f0;
 
     font-size: 12px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -91,34 +112,37 @@ body {
 
 .hero h1 {
     margin-top: 15px;
+
     margin-bottom: 15px;
 
     font-size: 40px;
+
+    line-height: 1.2;
 }
 
 .hero p {
+    max-width: 700px;
+
     color: #9aa4b2;
 
     font-size: 16px;
+
     line-height: 1.6;
 }
 
 
-/* =========================
-   GENERATOR
-========================= */
+/* GENERATOR */
 
 .generator {
     max-width: 1100px;
+
     margin: auto;
 
     padding: 20px 25px 70px;
 }
 
 
-/* =========================
-   CARD
-========================= */
+/* CARD */
 
 .card {
     padding: 30px;
@@ -126,17 +150,18 @@ body {
     background: #0d131d;
 
     border: 1px solid #1d2938;
+
     border-radius: 12px;
 }
 
 .card h2 {
     margin-bottom: 25px;
+
+    font-size: 22px;
 }
 
 
-/* =========================
-   LENGTH
-========================= */
+/* LENGTH */
 
 .length-container {
     margin-bottom: 30px;
@@ -144,29 +169,33 @@ body {
 
 .length-header {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    justify-content: space-between;
 
     margin-bottom: 15px;
 }
 
 .length-header label {
     color: #cbd5e1;
+
     font-size: 14px;
 }
 
 .length-header strong {
     color: #4cc9f0;
+
     font-size: 18px;
 }
 
 
-/* =========================
-   RANGE
-========================= */
+/* RANGE */
 
 input[type="range"] {
     width: 100%;
+
+    height: 6px;
 
     accent-color: #4cc9f0;
 
@@ -174,14 +203,12 @@ input[type="range"] {
 }
 
 
-/* =========================
-   OPTIONS
-========================= */
+/* OPTIONS */
 
 .options {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 
     gap: 15px;
 
@@ -190,7 +217,9 @@ input[type="range"] {
 
 .option {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     padding: 15px;
@@ -198,6 +227,7 @@ input[type="range"] {
     background: #080b11;
 
     border: 1px solid #1d2938;
+
     border-radius: 7px;
 
     color: #cbd5e1;
@@ -213,6 +243,7 @@ input[type="range"] {
 
 .option input {
     width: 16px;
+
     height: 16px;
 
     accent-color: #4cc9f0;
@@ -221,9 +252,7 @@ input[type="range"] {
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* GENERATE BUTTON */
 
 .generate-button {
     width: 100%;
@@ -231,13 +260,16 @@ input[type="range"] {
     padding: 14px;
 
     border: none;
+
     border-radius: 7px;
 
     background: #4cc9f0;
+
     color: #05080d;
 
-    font-weight: bold;
     font-size: 15px;
+
+    font-weight: bold;
 
     cursor: pointer;
 }
@@ -247,9 +279,7 @@ input[type="range"] {
 }
 
 
-/* =========================
-   RESULT
-========================= */
+/* RESULT */
 
 .result-card {
     margin-top: 25px;
@@ -259,12 +289,15 @@ input[type="range"] {
     background: #0d131d;
 
     border: 1px solid #1d2938;
+
     border-radius: 12px;
 }
 
 .result-header {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 15px;
@@ -272,6 +305,7 @@ input[type="range"] {
 
 .result-header span {
     color: #9aa4b2;
+
     font-size: 13px;
 }
 
@@ -279,6 +313,7 @@ input[type="range"] {
     padding: 8px 15px;
 
     border: 1px solid rgba(76, 201, 240, 0.3);
+
     border-radius: 6px;
 
     background: transparent;
@@ -293,21 +328,21 @@ input[type="range"] {
 }
 
 
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
 .password-display {
     min-height: 65px;
 
-    display: flex;
-    align-items: center;
-
     padding: 18px;
+
+    display: flex;
+
+    align-items: center;
 
     background: #080b11;
 
     border: 1px solid #273244;
+
     border-radius: 7px;
 
     color: #ffffff;
@@ -316,13 +351,13 @@ input[type="range"] {
 
     font-size: 18px;
 
+    line-height: 1.5;
+
     word-break: break-all;
 }
 
 
-/* =========================
-   STRENGTH
-========================= */
+/* STRENGTH */
 
 .strength-container {
     margin-top: 25px;
@@ -330,6 +365,7 @@ input[type="range"] {
 
 .strength-label {
     display: flex;
+
     justify-content: space-between;
 
     margin-bottom: 10px;
@@ -347,6 +383,7 @@ input[type="range"] {
 
 .strength-bar {
     width: 100%;
+
     height: 7px;
 
     background: #1d2938;
@@ -358,17 +395,16 @@ input[type="range"] {
 
 .strength-progress {
     width: 0%;
+
     height: 100%;
 
     background: #4cc9f0;
 
-    transition: width 0.3s;
+    transition: width 0.3s ease;
 }
 
 
-/* =========================
-   INFO
-========================= */
+/* INFO */
 
 .info-box {
     margin-top: 25px;
@@ -392,24 +428,25 @@ input[type="range"] {
     color: #9aa4b2;
 
     font-size: 13px;
+
     line-height: 1.6;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    border-top: 1px solid #1d2938;
-
     padding: 25px;
+
+    border-top: 1px solid #1d2938;
 
     text-align: center;
 }
 
 footer a {
     color: #4cc9f0;
+
+    font-size: 14px;
 
     text-decoration: none;
 }
@@ -419,9 +456,7 @@ footer a:hover {
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -440,4 +475,5 @@ footer a:hover {
     .password-display {
         font-size: 15px;
     }
+
 }
