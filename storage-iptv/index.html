@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (sessionStorage.getItem("netsecureAuth") !== "true") {
+            window.location.replace("../../login.html");
+        }
+    </script>
+
+    <title>Calculadora de Storage IPTV | NetSecure Solutions</title>
+
+    <link rel="icon" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="../../arquivo.html">
+                <img src="../../assets/logo.png"
+                     alt="NetSecure Solutions"
+                     class="logo">
+            </a>
+
+            <div class="header-title">
+                STORAGE IPTV
+            </div>
+
+            <button class="logout-button" onclick="logout()">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <span>NETSECURE / IPTV</span>
+
+            <h1>Calculadora de Storage IPTV</h1>
+
+            <p>
+                Estime o espaço necessário para armazenamento de
+                gravações de canais IPTV.
+            </p>
+
+        </section>
+
+
+        <section class="calculator">
+
+            <div class="card">
+
+                <h2>Parâmetros</h2>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="channels">
+                            Quantidade de canais
+                        </label>
+
+                        <input
+                            type="number"
+                            id="channels"
+                            min="1"
+                            value="80"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="bitrate">
+                            Bitrate médio por canal (Mbps)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="bitrate"
+                            min="0.1"
+                            step="0.1"
+                            value="5"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="retention">
+                            Retenção (horas)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="retention"
+                            min="1"
+                            value="48"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="margin">
+                            Margem adicional (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="margin"
+                            min="0"
+                            value="20"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button class="calculate-button" onclick="calculateStorage()">
+                    Calcular Storage
+                </button>
+
+            </div>
+
+
+            <div class="results" id="results">
+
+                <div class="result-card">
+
+                    <span>Storage sem margem</span>
+
+                    <strong id="storageRaw">
+                        0 TB
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>Margem adicional</span>
+
+                    <strong id="marginValue">
+                        0 TB
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card highlight">
+
+                    <span>Storage recomendado</span>
+
+                    <strong id="storageRecommended">
+                        0 TB
+                    </strong>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>Bitrate agregado</span>
+
+                    <strong id="totalBitrate">
+                        0 Mbps
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>Observação</strong>
+
+                <p>
+                    O cálculo considera o bitrate médio informado e
+                    armazenamento decimal. O valor real pode variar
+                    conforme codec, container, overhead, sistema de
+                    arquivos e características da gravação.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <a href="../../arquivo.html">
+            ← Voltar para ferramentas
+        </a>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
