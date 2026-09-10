@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (sessionStorage.getItem("netsecureAuth") !== "true") {
+            window.location.replace("../../login.html");
+        }
+    </script>
+
+    <title>Gerador de Senhas | NetSecure Solutions</title>
+
+    <link rel="icon" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="../../arquivo.html">
+                <img src="../../assets/logo.png"
+                     alt="NetSecure Solutions"
+                     class="logo">
+            </a>
+
+            <div class="header-title">
+                GERADOR DE SENHAS
+            </div>
+
+            <button class="logout-button" onclick="logout()">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+    <main>
+
+        <section class="hero">
+
+            <span>NETSECURE / GERAL</span>
+
+            <h1>Gerador de senhas</h1>
+
+            <p>
+                Gere senhas aleatórias conforme a sua necessidade.
+            </p>
+
+        </section>
+
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="password" id="password">
+                </div>
+            </div>
+        </section>
+
+
+</body>
+</html>
