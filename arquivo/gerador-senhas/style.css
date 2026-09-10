@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 .header {
     border-bottom: 1px solid #1d2938;
     background: #0a0f17;
@@ -39,8 +44,10 @@ body {
 
 .header-title {
     color: #4cc9f0;
+
     font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
@@ -51,10 +58,20 @@ body {
     border-radius: 7px;
 
     background: transparent;
+
     color: #ff6b78;
 
     cursor: pointer;
 }
+
+.logout-button:hover {
+    background: rgba(215, 25, 47, 0.1);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     max-width: 1100px;
@@ -86,12 +103,22 @@ body {
     line-height: 1.6;
 }
 
-.calculator {
+
+/* =========================
+   GENERATOR
+========================= */
+
+.generator {
     max-width: 1100px;
     margin: auto;
 
     padding: 20px 25px 70px;
 }
+
+
+/* =========================
+   CARD
+========================= */
 
 .card {
     padding: 30px;
@@ -106,49 +133,101 @@ body {
     margin-bottom: 25px;
 }
 
-.form-grid {
+
+/* =========================
+   LENGTH
+========================= */
+
+.length-container {
+    margin-bottom: 30px;
+}
+
+.length-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.length-header label {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.length-header strong {
+    color: #4cc9f0;
+    font-size: 18px;
+}
+
+
+/* =========================
+   RANGE
+========================= */
+
+input[type="range"] {
+    width: 100%;
+
+    accent-color: #4cc9f0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 15px;
+
+    margin-bottom: 25px;
 }
 
-.input-group label {
-    display: block;
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    margin-bottom: 8px;
+    padding: 15px;
+
+    background: #080b11;
+
+    border: 1px solid #1d2938;
+    border-radius: 7px;
 
     color: #cbd5e1;
 
     font-size: 14px;
+
+    cursor: pointer;
 }
 
-.input-group input {
+.option:hover {
+    border-color: #334155;
+}
+
+.option input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #4cc9f0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.generate-button {
     width: 100%;
 
-    padding: 13px;
-
-    background: #080b11;
-
-    border: 1px solid #273244;
-    border-radius: 7px;
-
-    color: #ffffff;
-
-    font-size: 15px;
-
-    outline: none;
-}
-
-.input-group input:focus {
-    border-color: #4cc9f0;
-}
-
-.calculate-button {
-    width: 100%;
-
-    margin-top: 25px;
     padding: 14px;
 
     border: none;
@@ -163,46 +242,133 @@ body {
     cursor: pointer;
 }
 
-.results {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 15px;
-
-    margin-top: 25px;
+.generate-button:hover {
+    opacity: 0.85;
 }
 
+
+/* =========================
+   RESULT
+========================= */
+
 .result-card {
-    padding: 25px;
+    margin-top: 25px;
+
+    padding: 30px;
 
     background: #0d131d;
 
     border: 1px solid #1d2938;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-.result-card span {
-    display: block;
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    margin-bottom: 15px;
+}
+
+.result-header span {
     color: #9aa4b2;
+    font-size: 13px;
+}
+
+.copy-button {
+    padding: 8px 15px;
+
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #4cc9f0;
+
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: rgba(76, 201, 240, 0.08);
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-display {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 18px;
+
+    background: #080b11;
+
+    border: 1px solid #273244;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 18px;
+
+    word-break: break-all;
+}
+
+
+/* =========================
+   STRENGTH
+========================= */
+
+.strength-container {
+    margin-top: 25px;
+}
+
+.strength-label {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
 
     font-size: 13px;
-
-    margin-bottom: 12px;
 }
 
-.result-card strong {
-    font-size: 23px;
+.strength-label span {
+    color: #9aa4b2;
 }
 
-.result-card.highlight {
-    border-color: rgba(76, 201, 240, 0.4);
-}
-
-.result-card.highlight strong {
+.strength-label strong {
     color: #4cc9f0;
 }
+
+.strength-bar {
+    width: 100%;
+    height: 7px;
+
+    background: #1d2938;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.strength-progress {
+    width: 0%;
+    height: 100%;
+
+    background: #4cc9f0;
+
+    transition: width 0.3s;
+}
+
+
+/* =========================
+   INFO
+========================= */
 
 .info-box {
     margin-top: 25px;
@@ -229,6 +395,11 @@ body {
     line-height: 1.6;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     border-top: 1px solid #1d2938;
 
@@ -239,13 +410,22 @@ footer {
 
 footer a {
     color: #4cc9f0;
+
     text-decoration: none;
 }
 
-@media (max-width: 800px) {
+footer a:hover {
+    text-decoration: underline;
+}
 
-    .form-grid,
-    .results {
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .options {
         grid-template-columns: 1fr;
     }
 
@@ -255,5 +435,9 @@ footer a {
 
     .header-title {
         display: none;
+    }
+
+    .password-display {
+        font-size: 15px;
     }
 }

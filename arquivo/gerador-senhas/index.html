@@ -11,7 +11,7 @@
         }
     </script>
 
-    <title>Gerador de Senhas | NetSecure Solutions</title>
+    <title>Gerador de Senhas | NetSecure Solutions">
 
     <link rel="icon" href="../../assets/favicon.png">
     <link rel="stylesheet" href="style.css">
@@ -24,9 +24,11 @@
         <div class="header-container">
 
             <a href="../../arquivo.html">
-                <img src="../../assets/logo.png"
-                     alt="NetSecure Solutions"
-                     class="logo">
+                <img
+                    src="../../assets/logo.png"
+                    alt="NetSecure Solutions"
+                    class="logo"
+                >
             </a>
 
             <div class="header-title">
@@ -40,28 +42,211 @@
         </div>
 
     </header>
+
+
     <main>
 
         <section class="hero">
 
-            <span>NETSECURE / GERAL</span>
+            <span>NETSECURE / SECURITY</span>
 
-            <h1>Gerador de senhas</h1>
+            <h1>Gerador de Senhas</h1>
 
             <p>
-                Gere senhas aleatórias conforme a sua necessidade.
+                Gere senhas aleatórias e personalizadas para utilização
+                em sistemas, equipamentos e serviços.
             </p>
 
         </section>
 
-        <section class="box">
-            <div class="password">
-                <div class="text">
-                    <input type="text" name="password" id="password">
+
+        <section class="generator">
+
+            <div class="card">
+
+                <h2>Configuração</h2>
+
+                <div class="length-container">
+
+                    <div class="length-header">
+
+                        <label for="length">
+                            Tamanho da senha
+                        </label>
+
+                        <strong id="lengthValue">
+                            20
+                        </strong>
+
+                    </div>
+
+                    <input
+                        type="range"
+                        id="length"
+                        min="6"
+                        max="64"
+                        value="20"
+                    >
+
                 </div>
+
+
+                <div class="options">
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            id="uppercase"
+                            checked
+                        >
+
+                        <span>
+                            Letras maiúsculas
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            id="lowercase"
+                            checked
+                        >
+
+                        <span>
+                            Letras minúsculas
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            id="numbers"
+                            checked
+                        >
+
+                        <span>
+                            Números
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="checkbox"
+                            id="symbols"
+                            checked
+                        >
+
+                        <span>
+                            Símbolos
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="generate-button"
+                    onclick="generatePassword()"
+                >
+                    Gerar Senha
+                </button>
+
             </div>
+
+
+            <div class="result-card">
+
+                <div class="result-header">
+
+                    <span>
+                        Senha gerada
+                    </span>
+
+                    <button
+                        class="copy-button"
+                        onclick="copyPassword()"
+                    >
+                        Copiar
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="password-display"
+                    id="password"
+                >
+                    Clique em "Gerar Senha"
+                </div>
+
+
+                <div class="strength-container">
+
+                    <div class="strength-label">
+
+                        <span>
+                            Força
+                        </span>
+
+                        <strong id="strengthText">
+                            -
+                        </strong>
+
+                    </div>
+
+                    <div class="strength-bar">
+
+                        <div
+                            id="strengthBar"
+                            class="strength-progress"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>Privacidade</strong>
+
+                <p>
+                    A senha é gerada inteiramente no navegador.
+                    Nenhuma senha ou informação é enviada para
+                    servidores externos.
+                </p>
+
+            </div>
+
         </section>
 
+    </main>
+
+
+    <footer>
+
+        <a href="../../arquivo.html">
+            ← Voltar para ferramentas
+        </a>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
