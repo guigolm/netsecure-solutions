@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (sessionStorage.getItem("netsecureAuth") !== "true") {
+            window.location.replace("../../login.html");
+        }
+    </script>
+
+    <title>Gerenciamento de STBs | NetSecure Solutions</title>
+    <link rel="icon" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+
+        <a href="../../arquivo.html" class="logo-link">
+            <img src="../../assets/logo.png" alt="NetSecure Solutions" class="logo">
+        </a>
+
+        <div class="header-title">STB MANAGEMENT</div>
+
+        <button type="button" class="logout-button" onclick="logout()">Sair</button>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <span>NETSECURE / ANDROID TV / HOSPITALITY</span>
+        <h1>Gerenciamento de <strong>STBs</strong></h1>
+        <p>
+            Painel para acompanhar dispositivos Android TV, estado do Agent,
+            conectividade, aplicações e comandos remotos.
+        </p>
+    </section>
+
+    <section class="dashboard">
+
+        <div class="stats">
+            <div class="stat-card">
+                <span>STBs cadastrados</span>
+                <strong id="totalDevices">0</strong>
+            </div>
+            <div class="stat-card online">
+                <span>Online</span>
+                <strong id="onlineDevices">0</strong>
+            </div>
+            <div class="stat-card warning">
+                <span>Sem comunicação</span>
+                <strong id="offlineDevices">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Agent instalado</span>
+                <strong id="agentDevices">0%</strong>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input id="searchInput" type="search"
+                       placeholder="Buscar por STB, hotel, quarto, IP ou MAC...">
+            </div>
+
+            <select id="statusFilter">
+                <option value="all">Todos os status</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+                <option value="warning">Atenção</option>
+            </select>
+
+            <button class="btn btn-primary" id="refreshButton">ATUALIZAR</button>
+        </div>
+
+        <div class="content-grid">
+
+            <section class="card devices-card">
+                <div class="card-header">
+                    <div>
+                        <span class="card-label">FROTA</span>
+                        <h2>Dispositivos</h2>
+                    </div>
+                    <span class="live-badge">● ATUALIZAÇÃO LOCAL</span>
+                </div>
+
+                <div id="deviceList" class="device-list"></div>
+            </section>
+
+            <aside class="card detail-card" id="detailPanel">
+                <div class="empty-detail">
+                    <div class="empty-icon">◇</div>
+                    <h2>Selecione um STB</h2>
+                    <p>
+                        Selecione um dispositivo para consultar informações
+                        e executar ações remotas.
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <a href="../../arquivo.html">← Voltar para ferramentas</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
