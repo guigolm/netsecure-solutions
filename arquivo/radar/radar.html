@@ -1,0 +1,737 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b10">
+    <meta name="description" content="Radar — central de acompanhamento de temas, conteúdos e ferramentas da comunidade.">
+
+    <title>Radar | NetSecure Solutions</title>
+
+    <link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+        <a class="brand" href="../../index.html" aria-label="NetSecure Solutions - início">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="brand-name">
+                NET<span>SECURE</span>
+                <small>SOLUTIONS</small>
+            </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegação principal">
+            <a href="../../index.html">Início</a>
+            <a href="#war-room">War Room</a>
+            <a href="#temas">Temas</a>
+            <a href="#midia">Conteúdos</a>
+            <a href="#ferramentas">Ferramentas</a>
+        </nav>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <a class="nav-cta" href="#war-room">
+            Explorar radar <span>↗</span>
+        </a>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="pulse"></span>
+                    CENTRAL DE INTELIGÊNCIA
+                    <span class="eyebrow-line"></span>
+                    NS / RADAR
+                </div>
+
+                <h1>
+                    O que está no<br>
+                    <span class="accent">radar</span> agora<span class="red-dot">.</span>
+                </h1>
+
+                <p class="hero-lede">
+                    Um centro de comando para acompanhar temas em alta,
+                    descobrir conteúdos relevantes e transformar sinais em ação.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#temas">
+                        Ver temas em destaque <span>→</span>
+                    </a>
+
+                    <a class="button button-ghost" href="#war-room">
+                        Entrar na War Room <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span><i class="meta-dot"></i> PAINEL DE MONITORAMENTO</span>
+                    <span>ATUALIZADO PARA SUA COMUNIDADE</span>
+                </div>
+            </div>
+
+            <div class="radar-visual" aria-label="Ilustração de radar tecnológico">
+                <div class="radar-label label-top">
+                    SIGNAL DETECTED <b>●</b>
+                </div>
+
+                <div class="radar-grid">
+                    <div class="radar-ring ring-1"></div>
+                    <div class="radar-ring ring-2"></div>
+                    <div class="radar-ring ring-3"></div>
+
+                    <div class="radar-cross cross-x"></div>
+                    <div class="radar-cross cross-y"></div>
+
+                    <div class="radar-sweep"></div>
+
+                    <span class="blip blip-one"></span>
+                    <span class="blip blip-two"></span>
+                    <span class="blip blip-three"></span>
+
+                    <span class="radar-center"></span>
+                </div>
+
+                <div class="radar-label label-bottom">
+                    <span>SCAN STATUS</span>
+                    <b>ONLINE</b>
+                    <span class="scan-bars">▂ ▄ ▆ ▇</span>
+                </div>
+
+                <div class="floating-tag tag-a">
+                    <span class="tag-icon">↗</span>
+                    <span>
+                        <small>SINAL EM ALTA</small>
+                        <b>Trending topic</b>
+                    </span>
+                </div>
+
+                <div class="floating-tag tag-b">
+                    <span class="tag-icon tag-icon-red">◎</span>
+                    <span>
+                        <small>MONITORAMENTO</small>
+                        <b>Radar ativo</b>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDICADORES -->
+        <section class="metrics" aria-label="Indicadores do radar">
+            <div class="metric">
+                <span class="metric-icon">◈</span>
+                <div>
+                    <strong id="metricTopics">08</strong>
+                    <small>TEMAS MAPEADOS</small>
+                </div>
+            </div>
+
+            <div class="metric">
+                <span class="metric-icon">↗</span>
+                <div>
+                    <strong id="metricTrending">04</strong>
+                    <small>EM DESTAQUE</small>
+                </div>
+            </div>
+
+            <div class="metric">
+                <span class="metric-icon">▤</span>
+                <div>
+                    <strong id="metricContent">06</strong>
+                    <small>CONTEÚDOS</small>
+                </div>
+            </div>
+
+            <div class="metric">
+                <span class="metric-icon">⌘</span>
+                <div>
+                    <strong>24/7</strong>
+                    <small>ACESSO AO PAINEL</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAR ROOM -->
+        <section class="section" id="war-room">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">01 / CENTRAL DE OPERAÇÕES</div>
+                    <h2>War <span class="accent">Room</span></h2>
+                </div>
+
+                <p>
+                    Seu ponto de partida para entender o cenário, priorizar
+                    assuntos e acompanhar os sinais que merecem atenção.
+                </p>
+            </div>
+
+            <div class="war-grid">
+                <article class="war-card war-card-featured">
+                    <div class="card-topline">
+                        <span class="status-pill"><i></i> PAINEL PRINCIPAL</span>
+                        <span class="card-code">WR-001</span>
+                    </div>
+
+                    <div class="war-illustration">
+                        <div class="mini-radar">
+                            <i></i>
+                            <b></b>
+                            <em></em>
+                        </div>
+
+                        <div class="signal-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <h3>Visão geral do cenário</h3>
+
+                    <p>
+                        Reúna os assuntos prioritários em uma visão única.
+                        Use os temas abaixo para explorar oportunidades,
+                        conversas e conteúdos.
+                    </p>
+
+                    <a href="#temas" class="text-link">
+                        Acessar visão geral <span>→</span>
+                    </a>
+                </article>
+
+                <article class="war-card">
+                    <div class="card-topline">
+                        <span class="status-pill status-blue"><i></i> DESCOBERTA</span>
+                        <span class="card-code">WR-002</span>
+                    </div>
+
+                    <div class="icon-tile">⌕</div>
+
+                    <h3>Busca inteligente</h3>
+
+                    <p>
+                        Encontre rapidamente temas e conteúdos usando
+                        palavras-chave ou categorias.
+                    </p>
+
+                    <a href="#temas" class="text-link">
+                        Pesquisar temas <span>→</span>
+                    </a>
+                </article>
+
+                <article class="war-card">
+                    <div class="card-topline">
+                        <span class="status-pill status-purple"><i></i> CURADORIA</span>
+                        <span class="card-code">WR-003</span>
+                    </div>
+
+                    <div class="icon-tile purple">◉</div>
+
+                    <h3>Monitoramento de sinais</h3>
+
+                    <p>
+                        Identifique o que está em alta e organize
+                        o acompanhamento por relevância.
+                    </p>
+
+                    <a href="#temas" class="text-link">
+                        Ver destaques <span>→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- TEMAS -->
+        <section class="section section-topline" id="temas">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">02 / TENDÊNCIAS E ASSUNTOS</div>
+                    <h2>Temas que viram <span class="accent">voto</span></h2>
+                </div>
+
+                <p>
+                    Explore os temas mapeados, filtre por categoria ou
+                    pesquise diretamente pelo assunto desejado.
+                </p>
+            </div>
+
+            <div class="topic-controls">
+                <label class="searchbox">
+                    <span>⌕</span>
+                    <input
+                        id="topicSearch"
+                        type="search"
+                        placeholder="Buscar tema, palavra-chave..."
+                        autocomplete="off"
+                    >
+                    <kbd>⌘ K</kbd>
+                </label>
+
+                <div class="filter-row" id="filterRow" aria-label="Filtrar por categoria">
+                    <button class="filter-chip active" data-filter="Todos">
+                        Todos <span>08</span>
+                    </button>
+
+                    <button class="filter-chip" data-filter="Tecnologia">Tecnologia</button>
+                    <button class="filter-chip" data-filter="Comunidade">Comunidade</button>
+                    <button class="filter-chip" data-filter="Cultura">Cultura</button>
+                    <button class="filter-chip" data-filter="Sociedade">Sociedade</button>
+                </div>
+            </div>
+
+            <div class="topic-grid" id="topicGrid">
+                <article
+                    class="topic-card"
+                    data-category="Tecnologia"
+                    data-search="inteligência artificial ia inovação futuro tecnologia"
+                >
+                    <div class="topic-art art-ai">
+                        <span class="art-orbit"></span>
+                        <span class="art-core">AI</span>
+                        <span class="art-caption">NEURAL NETWORK / 01</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>TECNOLOGIA</span>
+                            <span class="trend">↗ EM ALTA</span>
+                        </div>
+
+                        <h3>Inteligência artificial</h3>
+                        <p>O impacto da IA no cotidiano, no trabalho e nas decisões do futuro.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-001</span>
+                            <button class="details-button" data-topic="Inteligência artificial">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Comunidade"
+                    data-search="comunidade participação colaboração impacto local"
+                >
+                    <div class="topic-art art-community">
+                        <span class="community-shape shape-one"></span>
+                        <span class="community-shape shape-two"></span>
+                        <span class="community-shape shape-three"></span>
+                        <span class="art-caption">PEOPLE / CONNECTION</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>COMUNIDADE</span>
+                            <span class="trend">↗ EM ALTA</span>
+                        </div>
+
+                        <h3>Força da comunidade</h3>
+                        <p>Ideias coletivas, colaboração e iniciativas com impacto real.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-002</span>
+                            <button class="details-button" data-topic="Força da comunidade">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Cultura"
+                    data-search="cultura entretenimento música cinema tendências"
+                >
+                    <div class="topic-art art-culture">
+                        <span class="culture-disc"></span>
+                        <span class="culture-disc disc-two"></span>
+                        <span class="art-caption">CULTURE / SIGNAL 03</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>CULTURA</span>
+                            <span class="trend trend-muted">SINAL ESTÁVEL</span>
+                        </div>
+
+                        <h3>Cultura em movimento</h3>
+                        <p>O que estamos assistindo, ouvindo e compartilhando.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-003</span>
+                            <button class="details-button" data-topic="Cultura em movimento">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Sociedade"
+                    data-search="sociedade cidades sustentabilidade mobilidade futuro"
+                >
+                    <div class="topic-art art-city">
+                        <span class="cityline"></span>
+                        <span class="art-caption">URBAN / FUTURE MAP</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>SOCIEDADE</span>
+                            <span class="trend">↗ EM ALTA</span>
+                        </div>
+
+                        <h3>Cidades do futuro</h3>
+                        <p>Soluções, mobilidade e tecnologia para viver melhor.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-004</span>
+                            <button class="details-button" data-topic="Cidades do futuro">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Tecnologia"
+                    data-search="segurança digital privacidade cibersegurança dados"
+                >
+                    <div class="topic-art art-security">
+                        <span class="shield">⌑</span>
+                        <span class="art-caption">SECURITY / PROTOCOL 05</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>TECNOLOGIA</span>
+                            <span class="trend">↗ EM ALTA</span>
+                        </div>
+
+                        <h3>Segurança digital</h3>
+                        <p>Privacidade, proteção de dados e confiança em ambientes conectados.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-005</span>
+                            <button class="details-button" data-topic="Segurança digital">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Comunidade"
+                    data-search="criadores creators vídeo conteúdo redes sociais"
+                >
+                    <div class="topic-art art-creators">
+                        <span class="play-button">▶</span>
+                        <span class="art-caption">CREATORS / BROADCAST</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>COMUNIDADE</span>
+                            <span class="trend trend-muted">EM OBSERVAÇÃO</span>
+                        </div>
+
+                        <h3>Vozes e criadores</h3>
+                        <p>Pessoas e canais que ajudam a pautar conversas relevantes.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-006</span>
+                            <button class="details-button" data-topic="Vozes e criadores">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Sociedade"
+                    data-search="educação aprendizagem conhecimento habilidades"
+                >
+                    <div class="topic-art art-learning">
+                        <span class="book-shape">▤</span>
+                        <span class="art-caption">KNOWLEDGE / 07</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>SOCIEDADE</span>
+                            <span class="trend trend-muted">SINAL ESTÁVEL</span>
+                        </div>
+
+                        <h3>Aprender sempre</h3>
+                        <p>Novas habilidades, acesso ao conhecimento e educação contínua.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-007</span>
+                            <button class="details-button" data-topic="Aprender sempre">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="topic-card"
+                    data-category="Cultura"
+                    data-search="bem-estar saúde qualidade de vida rotina"
+                >
+                    <div class="topic-art art-wellbeing">
+                        <span class="wellbeing-ring"></span>
+                        <span class="art-caption">WELLBEING / SIGNAL 08</span>
+                    </div>
+
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span>CULTURA</span>
+                            <span class="trend trend-muted">EM OBSERVAÇÃO</span>
+                        </div>
+
+                        <h3>Bem-estar conectado</h3>
+                        <p>Hábitos, equilíbrio e tecnologia a serviço da qualidade de vida.</p>
+
+                        <div class="topic-footer">
+                            <span>NS / TEMA-008</span>
+                            <button class="details-button" data-topic="Bem-estar conectado">
+                                Explorar <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+                <span>⌕</span>
+                <h3>Nenhum tema encontrado</h3>
+                <p>Tente outra palavra ou selecione uma categoria diferente.</p>
+            </div>
+        </section>
+
+        <!-- CONTEÚDOS -->
+        <section class="section section-topline" id="midia">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">03 / CONTEÚDO CURADO</div>
+                    <h2>Vídeos & <span class="accent">canais</span></h2>
+                </div>
+
+                <p>
+                    Uma área para reunir vídeos, referências e fontes
+                    que ajudam a acompanhar os assuntos do momento.
+                </p>
+            </div>
+
+            <div class="media-grid">
+                <a class="media-card" href="#ferramentas">
+                    <div class="media-thumb thumb-video">
+                        <span class="play-button">▶</span>
+                        <span class="thumb-code">PLAY / 001</span>
+                    </div>
+
+                    <div class="media-info">
+                        <span class="media-type">VÍDEO EM DESTAQUE</span>
+                        <h3>Radar de ideias</h3>
+                        <p>Conteúdos para entender as conversas que estão ganhando força.</p>
+                        <span class="media-link">Explorar conteúdos ↗</span>
+                    </div>
+                </a>
+
+                <a class="media-card" href="#ferramentas">
+                    <div class="media-thumb thumb-channel">
+                        <span class="channel-wave">〰</span>
+                        <span class="thumb-code">CHANNEL / 002</span>
+                    </div>
+
+                    <div class="media-info">
+                        <span class="media-type">CANAIS E REFERÊNCIAS</span>
+                        <h3>Fontes para acompanhar</h3>
+                        <p>Organize canais e referências úteis em um só lugar.</p>
+                        <span class="media-link">Ver referências ↗</span>
+                    </div>
+                </a>
+
+                <a class="media-card" href="#ferramentas">
+                    <div class="media-thumb thumb-community">
+                        <span class="community-icon">◎</span>
+                        <span class="thumb-code">COMMUNITY / 003</span>
+                    </div>
+
+                    <div class="media-info">
+                        <span class="media-type">COMUNIDADE</span>
+                        <h3>Conversas em destaque</h3>
+                        <p>Descubra perspectivas e participe das discussões.</p>
+                        <span class="media-link">Acessar comunidade ↗</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FERRAMENTAS -->
+        <section class="section tools-section section-topline" id="ferramentas">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">04 / KIT DE OPERAÇÕES</div>
+                    <h2>Ferramentas da <span class="accent">comunidade</span></h2>
+                </div>
+
+                <p>
+                    Atalhos e recursos para organizar sua pesquisa,
+                    registrar ideias e acompanhar os temas importantes.
+                </p>
+            </div>
+
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <span class="tool-icon">⌕</span>
+                    <div>
+                        <span class="tool-number">TOOL / 01</span>
+                        <h3>Explorador de temas</h3>
+                        <p>Pesquise e filtre os assuntos mapeados no radar.</p>
+                        <a href="#temas" class="text-link">Abrir explorador →</a>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <span class="tool-icon blue">▤</span>
+                    <div>
+                        <span class="tool-number">TOOL / 02</span>
+                        <h3>Biblioteca de conteúdo</h3>
+                        <p>Encontre a área de vídeos e referências organizadas.</p>
+                        <a href="#midia" class="text-link">Abrir biblioteca →</a>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <span class="tool-icon purple">✎</span>
+                    <div>
+                        <span class="tool-number">TOOL / 03</span>
+                        <h3>Bloco de notas</h3>
+                        <p>Registre ideias localmente no navegador para consultar depois.</p>
+                        <button class="text-link button-link" id="openNotes">Abrir notas →</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ENCERRAMENTO -->
+        <section class="closing-cta">
+            <div class="cta-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div>
+                <div class="section-kicker">NETSECURE / RADAR</div>
+                <h2>Transforme sinais em <span class="accent">decisões.</span></h2>
+                <p>Explore os temas, acompanhe os conteúdos e mantenha o radar ligado.</p>
+            </div>
+
+            <a class="button button-primary" href="#temas">
+                Explorar agora <span>→</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <a class="brand brand-footer" href="../../index.html">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="brand-name">
+                NET<span>SECURE</span>
+                <small>SOLUTIONS</small>
+            </span>
+        </a>
+
+        <span>© <span id="year"></span> NETSECURE SOLUTIONS</span>
+
+        <span class="footer-status">
+            <i></i> SYSTEM ONLINE
+        </span>
+    </footer>
+
+    <!-- JANELA DE DETALHES -->
+    <dialog id="topicDialog" class="modal">
+        <button class="modal-close" data-close aria-label="Fechar">×</button>
+
+        <div class="section-kicker">RADAR / DETALHES DO TEMA</div>
+
+        <h2 id="dialogTitle">Tema</h2>
+        <p id="dialogText"></p>
+
+        <div class="modal-note">
+            <span class="modal-note-icon">◈</span>
+            <span>
+                <b>Área de curadoria</b>
+                <small>
+                    Este espaço pode receber links, fontes, vídeos e votações reais do projeto.
+                </small>
+            </span>
+        </div>
+
+        <button class="button button-primary" data-close>
+            Entendi <span>→</span>
+        </button>
+    </dialog>
+
+    <!-- BLOCO DE NOTAS -->
+    <dialog id="notesDialog" class="modal notes-modal">
+        <button class="modal-close" data-close aria-label="Fechar">×</button>
+
+        <div class="section-kicker">FERRAMENTA / NOTAS LOCAIS</div>
+
+        <h2>Bloco de <span class="accent">notas</span></h2>
+        <p>Suas notas ficam salvas neste navegador, neste dispositivo.</p>
+
+        <textarea
+            id="notesText"
+            rows="7"
+            placeholder="Registre uma ideia, link ou observação..."
+        ></textarea>
+
+        <div class="notes-actions">
+            <span id="notesStatus">Salvamento local automático</span>
+
+            <button class="button button-primary" data-close>
+                Concluir <span>✓</span>
+            </button>
+        </div>
+    </dialog>
+
+    <script src="radar.js"></script>
+</body>
+</html>
